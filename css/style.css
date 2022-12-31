@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    background-color: #00C4B3;
+    height: 100vh;
+    overflow-block: scroll;
+}
+
+.navbar{
+    color: rgb(35, 37, 58);
+    height: 8vh;
+    background-color: rgba(35, 37, 58,0);
+    width: 100vw;
+    font-family: 'Comfortaa', cursive;
+    transition: background-color 1s cubic-bezier(0,.99,.89,1);
+}
+
+.navbar:hover{
+    background-color: rgba(35, 37, 58,100);
+    color: #00C4B3;
+
+}
+
+.jad,.ilo,.hive{
+    padding-right: 10px;
+}
+
+.jad:hover,.ilo:hover,.hive:hover{
+    cursor: grab;
+}
+
+.landing{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    height: 92vh;
+
+}
+
+.base{
+    width: 50vw;
+    position: fixed;
+    top: 40%;
+    text-transform: capitalize;
+    font-family: 'Comfortaa', cursive;
+    font-size: 5rem;
+    color: #23253A;
+}
+
+.icon{
+    width: 50vw;
+}
+
+.computer{
+    font-size: xx-large;
+}
+
+.down{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 1.5rem;
+}
+
+.arrowDown{
+    animation: infinite scroll 2s cubic-bezier(0,.85,.89,1);
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateY(5px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+.whoIAm{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftWho{
+    width: 50vw;
+    height: 100vh;
+}
+
+.rightWho{
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar{
+    background-image: url("../img/avatar.png");
+    height: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
