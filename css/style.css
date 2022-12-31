@@ -38,13 +38,24 @@ body{
 
 .base{
     width: 50vw;
-    position: fixed;
     top: 40%;
+    position: fixed;
     text-transform: capitalize;
     font-family: 'Comfortaa', cursive;
     font-size: 5rem;
     color: #23253A;
+    transition:ease-out 2s;
 }
+
+.animationText{
+    top: 0;
+    transform: translateX(40vw);
+    font-size: 1.3rem;
+    transition: 2s ease-out;
+}
+
+
+
 
 .icon{
     width: 50vw;
@@ -97,6 +108,15 @@ body{
     width: 50vw;
     height: 100vh;
 }
+
+.scroll{
+    transition: 2s opacity ease-out;
+}
+.animation{
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
 
 .rightWho{
     display: flex;
