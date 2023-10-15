@@ -1,12 +1,13 @@
 body{
+    font-family: 'Comfortaa', cursive;
     margin: 0;
-    background-color: #00C4B3;
+    background-color: #252525;
     height: 100vh;
     overflow-block: scroll;
 }
 
 .navbar{
-    color: rgb(35, 37, 58);
+    color: rgb(255, 255, 255);
     height: 8vh;
     background-color: rgba(35, 37, 58,0);
     width: 100vw;
@@ -15,8 +16,8 @@ body{
 }
 
 .navbar:hover{
-    background-color: rgba(35, 37, 58,100);
-    color: #00C4B3;
+    background-color: rgb(255, 255, 255);
+    color: #252525;
 
 }
 
@@ -41,17 +42,16 @@ body{
     top: 40%;
     position: fixed;
     text-transform: capitalize;
-    font-family: 'Comfortaa', cursive;
     font-size: 5rem;
-    color: #23253A;
-    transition:ease-out 2s;
+    color: white;
+    transition:ease-out 1s;
 }
 
 .animationText{
     top: 0;
     transform: translateX(40vw);
     font-size: 1.3rem;
-    transition: 2s ease-out;
+    transition: 1s ease-out;
 }
 
 
@@ -118,12 +118,18 @@ body{
 }
 
 
-.rightWho{
+.rightWho,.leftWho{
     display: flex;
     width: 50vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.presentationText{
+    margin-left: 20%;
+    width: 80%;
+    color: white;
 }
 
 .avatar{
@@ -132,4 +138,18 @@ body{
     width: 50%;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.goBackTop{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 15px;
+    background-color: white;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
 }

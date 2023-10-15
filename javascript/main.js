@@ -3,6 +3,7 @@ const info2 = document.querySelector(".ilo")
 const info3 = document.querySelector(".jad")
 const scrolling = document.querySelector('.scroll')
 const text = document.querySelector('.base')
+const backTop = document.querySelector(".goBackTop")
 
 info1.addEventListener('click',()=>{
     scrollBy(0,1500)
@@ -30,3 +31,8 @@ const observateur = new IntersectionObserver(entries => {
 })
 
 observateur.observe(document.querySelector('.navbar'))
+
+
+backTop.addEventListener("click",()=>{
+    scrollBy(0,-10000)
+})
