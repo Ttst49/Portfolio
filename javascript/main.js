@@ -150,17 +150,17 @@ const templatingZone = document.querySelector(".zone")
 const contactPanel = document.querySelector(".contactPanel")
 
 
-let homeTemplate = "" +
+let homeTemplate = "<div class='texting'>" +
     "I'm a passionate web developer with a strong foundation in front-end and back-end technologies. My journey in the world of web development started years ago and since then, I've been dedicated to creating responsive and user-friendly web applications. I thrive on challenges and enjoy staying up to date with the latest trends in the field. <br>" +
-    "<br>I have always believed that code is a way to express oneself without speaking, simply by striving to make each of code better than the previous one."
-
-const projectModel = document.createElement("div")
-
+    "<br>I have always believed that code is a way to express oneself without speaking, simply by striving to make each of code better than the previous one." +
+    "</div>"
 
 
-let projectsTemplate = projectModel
 
-let infosTemplate =''+
+
+let projectsTemplate ="<div class='texting'>" + "bonjue" + "</div>"
+
+let infosTemplate ='<div class="texting">'+
     "<br>" +
     "Skills<br>" +
     "<br>" +
@@ -177,7 +177,8 @@ let infosTemplate =''+
     "<a class='link' href='https://github.com/ttst49'>- GitHub</a><br>" +
     "<a class='link' href='mailto:thibautstachnick@gmail.com'>- Email</a><br>" +
     "<br>" +
-    "Feel free to connect with me on LinkedIn or explore my GitHub repositories to learn more about my work and projects!<br>"
+    "Feel free to connect with me on LinkedIn or explore my GitHub repositories to learn more about my work and projects!<br>" +
+    "</div>"
 
 
 let contactTemplate = "Let's turn your good idea into reality together! Or perhaps you just want to have a chat with me, either way, it's all right below. <a onclick=\"showContactPanel()\" class='btn btn-primary'>Click on me</a>"
