@@ -48,7 +48,6 @@ body {
     border: white 1px solid;
     height: 91vh;
     width: 91vw;
-    z-index: 5;
 }
 
 .name{
