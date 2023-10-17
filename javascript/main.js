@@ -43,7 +43,7 @@ class Particle {
         this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
         this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
         this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-        this.maxSpeed = this.hueSemen > .5 ? 3 : 2
+        this.maxSpeed = this.hueSemen > .5 ? 1 : .5
     }
 
     randomize() {
@@ -51,7 +51,7 @@ class Particle {
         this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
         this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
         this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-        this.maxSpeed = this.hueSemen > .5 ? 3 : 2
+        this.maxSpeed = this.hueSemen > .5 ? 1 : .5
     }
 
     update() {
@@ -181,7 +181,7 @@ let infosTemplate ='<div class="texting">'+
     "</div>"
 
 
-let contactTemplate = "Let's turn your good idea into reality together! Or perhaps you just want to have a chat with me, either way, it's all right below. <a onclick=\"showContactPanel()\" class='btn btn-primary'>Click on me</a>"
+let contactTemplate = "Let's turn your good idea into reality together! Or perhaps you just want to have a chat with me, either way, it's all right below. <a onclick=\"showContactPanel()\" class='btn btn-primary'>Contact me</a>"
 
 
 homeButton.addEventListener("click",()=>{

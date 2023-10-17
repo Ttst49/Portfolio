@@ -18,7 +18,7 @@ body {
 .rightSide{
     background-color: black;
     position: absolute;
-    width: 5vw;
+    width: 4vw;
     right: 0;
     height: 100vh;
 }
@@ -35,7 +35,7 @@ body {
     background-color: black;
     position: absolute;
     width: 100vw;
-    height: 5vh;
+    height: 4vh;
     bottom: 0;
 }
 
@@ -48,6 +48,7 @@ body {
     border: white 1px solid;
     height: 91vh;
     width: 91vw;
+    z-index: 5;
 }
 
 .name{
