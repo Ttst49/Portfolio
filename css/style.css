@@ -1,155 +1,152 @@
-body{
-    font-family: 'Comfortaa', cursive;
+body {
     margin: 0;
-    background-color: #252525;
     height: 100vh;
-    overflow-block: scroll;
+    overflow: hidden;
+    background: black;
+    z-index: 5;
 }
 
-.navbar{
-    color: rgb(255, 255, 255);
-    height: 8vh;
-    background-color: rgba(35, 37, 58,0);
+
+
+.leftSide{
+    position: absolute;
+    background-color: black;
+    width: 5vw;
+    height: 100vh;
+}
+
+.rightSide{
+    background-color: black;
+    position: absolute;
+    width: 5vw;
+    right: 0;
+    height: 100vh;
+}
+
+.topSide{
+    background-color: black;
+    position: absolute;
     width: 100vw;
-    font-family: 'Comfortaa', cursive;
-    transition: background-color 1s cubic-bezier(0,.99,.89,1);
-}
-
-.navbar:hover{
-    background-color: rgb(255, 255, 255);
-    color: #252525;
-
-}
-
-.jad,.ilo,.hive{
-    padding-right: 10px;
-}
-
-.jad:hover,.ilo:hover,.hive:hover{
-    cursor: grab;
-}
-
-.landing{
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    height: 92vh;
-
-}
-
-.base{
-    width: 50vw;
-    top: 40%;
-    position: fixed;
-    text-transform: capitalize;
-    font-size: 5rem;
-    color: white;
-    transition:ease-out 1s;
-}
-
-.animationText{
+    height: 5vh;
     top: 0;
-    transform: translateX(40vw);
-    font-size: 1.3rem;
-    transition: 1s ease-out;
+}
+
+.bottomSide{
+    background-color: black;
+    position: absolute;
+    width: 100vw;
+    height: 5vh;
+    bottom: 0;
 }
 
 
-
-
-.icon{
-    width: 50vw;
+.interface{
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    margin: 0;
+    border: white 1px solid;
+    height: 91vh;
+    width: 91vw;
 }
 
-.computer{
-    font-size: xx-large;
+.name{
+    padding: 5vh;
+    color: white;
+    font-family: "Source Code Pro";
+    font-size: 18px;
 }
 
-.down{
+
+.zone {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 25vw;
+    padding: 5vh;
+    color: white;
+    font-family: "Source Code Pro ExtraLight";
+    font-size: 16px;
+    white-space: break-spaces;
+}
+
+.list{
     display: flex;
     flex-direction: column;
+    position: absolute;
+    margin-left: 5vh;
+
+}
+
+
+li{
+    list-style: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+
+span.active{
+    opacity: 0.5;
+    color: lightgrey;
+    transition: opacity .5s linear;
+}
+
+
+.contactPanel{
+    height: 100vh;
+    width: 40vw;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    right: -40vw;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: right .5s ease-in-out;
+}
+
+label{
+    padding: 2vh;
+}
+
+.showing{
+    transition: right .5s ease-in;
+    right: 0;
+}
+
+.btn-primary{
+    width: 80%;
+    left: 10%;
+    position: relative;
+    margin-top: 5vh;
+}
+
+.cross{
+    cursor: pointer;
+    top: 5vh;
+    left: 5vh;
+    color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    font-size: 1.5rem;
-}
-
-.arrowDown{
-    animation: infinite scroll 2s cubic-bezier(0,.85,.89,1);
-}
-
-@keyframes scroll {
-    0%{
-        transform: translateY(5px);
-    }
-    25%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(5px);
-    }
-    75%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(5px);
-    }
-}
-
-.whoIAm{
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.leftWho{
-    width: 50vw;
-    height: 100vh;
-}
-
-.scroll{
-    transition: 2s opacity ease-out;
-}
-.animation{
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-
-.rightWho,.leftWho{
-    display: flex;
-    width: 50vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.presentationText{
-    margin-left: 20%;
-    width: 80%;
-    color: white;
-}
-
-.avatar{
-    background-image: url("../img/avatar.png");
-    height: 50%;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.goBackTop{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 5vh;
     height: 5vh;
-    border-radius: 15px;
-    background-color: white;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
+    background-color: black;
+    font-size: x-large;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.link{
+    color: white;
+
 }
