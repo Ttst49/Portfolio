@@ -15,6 +15,7 @@ const opt = {
 }
 const Particles = []
 let time = 0
+/*
 document.body.addEventListener('click', () => {
     opt.h1 = rand(0, 360)
     opt.h2 = rand(0, 360)
@@ -28,7 +29,7 @@ document.body.addEventListener('click', () => {
         p.randomize()
     }
 })
-
+*/
 class Particle {
     constructor(x, y) {
         this.x = x
@@ -43,7 +44,7 @@ class Particle {
         this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
         this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
         this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-        this.maxSpeed = this.hueSemen > .5 ? 1 : .5
+        this.maxSpeed = this.hueSemen > .5 ? 1 : 1
     }
 
     randomize() {
@@ -51,7 +52,7 @@ class Particle {
         this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
         this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
         this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-        this.maxSpeed = this.hueSemen > .5 ? 1 : .5
+        this.maxSpeed = this.hueSemen > .5 ? 1 : 1
     }
 
     update() {
@@ -73,6 +74,7 @@ class Particle {
 
         this.edges()
     }
+
 
     follow() {
         let angle = (noise(this.x * opt.noiseScale, this.y * opt.noiseScale, time * opt.noiseScale)) * Math.PI * 0.5 + opt.angle
@@ -127,7 +129,7 @@ function setup() {
 
 function draw() {
     time++
-    background(0, 100 - opt.tail)
+    background(0, 100 - opt.tail )
 
     for (let p of Particles) {
         p.update()
