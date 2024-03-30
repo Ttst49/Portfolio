@@ -1,0 +1,18 @@
+.card{
+    background-color: #252525;
+    height: 20vh;
+    width: 30vw;
+}
+
+.topTitle {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Source Code Pro";
+}
+
+.languages{
+    color: white;
+}
