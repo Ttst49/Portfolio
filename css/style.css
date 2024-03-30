@@ -143,13 +143,15 @@ label{
     font-size: x-large;
 }
 
-.swiper {
-    width: 600px;
-    height: 300px;
-}
 
 .link{
     color: white;
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
 
 }
 
