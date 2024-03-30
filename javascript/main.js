@@ -1,4 +1,4 @@
-const deg = (a) => Math.PI / 180 * a
+//const deg = (a) => Math.PI / 180 * a
 const rand = (v1, v2) => Math.floor(v1 + Math.random() * (v2 - v1))
 const opt = {
     particles: window.width / 500 ? 1000 : 500,
@@ -47,13 +47,15 @@ class Particle {
         this.maxSpeed = this.hueSemen > .5 ? 1 : 1
     }
 
-    randomize() {
-        this.hueSemen = Math.random()
-        this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
-        this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
-        this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-        this.maxSpeed = this.hueSemen > .5 ? 1 : 1
-    }
+    /**
+     * randomize() {
+     *         this.hueSemen = Math.random()
+     *         this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
+     *         this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
+     *         this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
+     *         this.maxSpeed = this.hueSemen > .5 ? 1 : 1
+     *     }
+     */
 
     update() {
         this.follow()
@@ -61,9 +63,9 @@ class Particle {
         this.vx += this.ax
         this.vy += this.ay
 
-        var p = Math.sqrt(this.vx * this.vx + this.vy * this.vy)
-        var a = Math.atan2(this.vy, this.vx)
-        var m = Math.min(this.maxSpeed, p)
+        let p = Math.sqrt(this.vx * this.vx + this.vy * this.vy)
+        let a = Math.atan2(this.vy, this.vx)
+        let m = Math.min(this.maxSpeed, p)
         this.vx = Math.cos(a) * m
         this.vy = Math.sin(a) * m
 
@@ -118,7 +120,7 @@ class Particle {
 
 
 function setup() {
-    createCanvas(windowWidth, windowHeight)
+    createCanvas(window.innerWidth, window.innerHeight)
     for (let i = 0; i < opt.particles; i++) {
         Particles.push(new Particle(Math.random() * width, Math.random() * height))
     }
@@ -138,12 +140,6 @@ function draw() {
 }
 
 
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight)
-}
-
-
 const homeButton = document.querySelector(".home")
 const projectsButton = document.querySelector(".projects")
 const infoButton = document.querySelector(".infos")
@@ -160,13 +156,13 @@ let homeTemplate = "<div class='texting'>" +
 
 
 
-let projectsTemplate ="<div class='texting'>" + "bonjue" + "</div>"
+let projectsTemplate ="<div class='texting'>" + "Work in progress" + "</div>"
 
 let infosTemplate ='<div class="texting">'+
     "<br>" +
     "Skills<br>" +
     "<br>" +
-    "- Front-end Development: HTML5, CSS3, JavaScript,Angular, React, Vue.js, TypeScript<br>" +
+    "- Front-end Development: HTML, CSS, JavaScript,Angular, React, Vue, TypeScript<br>" +
     "- Back-end Development: Symfony, Node.js, Python, Express, Django<br>" +
     "- Databases: PostgreSQL, MongoDB, MySQL <br>" +
     "- Version Control: Git, GitHub<br>" +
@@ -175,10 +171,12 @@ let infosTemplate ='<div class="texting">'+
 
     "Contact<br>" +
     "<br>" +
-    "<a class='link' href='https://fr.linkedin.com/in/thibaut-stachnick'>- LinkedIn</a><br>" +
-    "<a class='link' href='https://github.com/ttst49'>- GitHub</a><br>" +
-    "<a class='link' href='mailto:thibautstachnick@gmail.com'>- Email</a><br>" +
+    "<div class='links'>" +
+    "<h1><a class='link' href='https://fr.linkedin.com/in/thibaut-stachnick'> <i class=\"fa-brands fa-linkedin\"></i></a></h1>" +
+    "<h1><a class='link' href='https://github.com/ttst49'> <i class=\"fa-brands fa-square-github\"></i></a></h1>" +
+    "<h1><a class='link' href='mailto:thibautstachnick@gmail.com'> <i class=\"fa-regular fa-envelope\"></i></a></h1><br>" +
     "<br>" +
+    "</div>"+
     "Feel free to connect with me on LinkedIn or explore my GitHub repositories to learn more about my work and projects!<br>" +
     "</div>"
 
