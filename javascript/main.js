@@ -10,8 +10,8 @@ const opt = {
     s2: rand(20, 90),
     l1: rand(30, 80),
     l2: rand(30, 80),
-    strokeWeight: 1.2,
-    tail: 82,
+    strokeWeight: 5,
+    tail: 60,
 }
 const Particles = []
 let time = 0
@@ -44,7 +44,7 @@ class Particle {
         this.hue = this.hueSemen > .5 ? 20 + opt.h1 : 20 + opt.h2
         this.sat = this.hueSemen > .5 ? opt.s1 : opt.s2
         this.light = this.hueSemen > .5 ? opt.l1 : opt.l2
-        this.maxSpeed = this.hueSemen > .5 ? 1 : 1
+        this.maxSpeed = this.hueSemen > .2 ? .5 : .5
     }
 
     /**
